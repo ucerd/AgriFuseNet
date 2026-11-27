@@ -1,0 +1,28 @@
+\begin{table*}[tbp]
+\centering
+\footnotesize
+\caption{Comparison of leaf-blade representations (accuracy, mean $\pm$ SD).}
+\label{tab:compare}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{llcccc}
+\toprule
+ & & \multicolumn{2}{c}{ResNet50} & \multicolumn{2}{c}{DINOv2 ViT-S/14} \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}
+Representation & Input & Accuracy (\%) & $p$ & Accuracy (\%) & $p$ \\
+\midrule
+Deep, full image & Full & 89.37 $\pm$ 4.18 & 0.670 & 93.89 $\pm$ 2.91 & 0.510 \\
+Deep, full image + PCA-128 & Full & 89.70 $\pm$ 4.32 & 0.780 & 93.04 $\pm$ 3.06 & 0.714 \\
+Deep, full image + LDA-4 & Full & 86.72 $\pm$ 3.99 & 0.245 & 71.79 $\pm$ 7.15 & $<$0.001 \\
+34-D global handcrafted & Full & 92.50 $\pm$ 3.79 & 0.533 & 92.50 $\pm$ 3.79 & 0.910 \\
+Concat. deep + 34-D handcrafted & Full & 89.77 $\pm$ 4.31 & 0.774 & 94.02 $\pm$ 3.63 & 0.469 \\
+Concat. deep + 34-D handcrafted + PCA-128 & Full & 90.30 $\pm$ 4.52 & 0.911 & 93.30 $\pm$ 3.45 & 0.626 \\
+Scalar-gated attention fusion & Full & 90.06 $\pm$ 3.97 & 0.874 & 94.74 $\pm$ 1.88 & 0.313 \\
+\midrule
+Deep, leaf only & Leaf & 75.95 $\pm$ 6.57 & $<$0.001 & 84.67 $\pm$ 4.27 & 0.001 \\
+Concat. leaf + tiles + 164-D handcrafted & Leaf & 86.04 $\pm$ 6.12 & 0.018 & 90.78 $\pm$ 4.54 & 0.377 \\
+Concat. leaf + tiles + 164-D handcrafted + PCA-128 & Leaf & 84.84 $\pm$ 7.59 & 0.020 & 89.92 $\pm$ 4.50 & 0.204 \\
+\textbf{Leaf-blade encoder} & Leaf & 90.66 $\pm$ 5.86 & -- & 92.22 $\pm$ 5.08 & -- \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table*}

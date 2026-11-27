@@ -1,0 +1,23 @@
+{
+ "gpu": "NVIDIA GeForce RTX 4070 Ti",
+ "params_M": {
+  "sam3": 840.376374,
+  "dinov2_s": 21.6288,
+  "organ_set_net": 0.721234
+ },
+ "sam3_ms_per_image": {
+  "leafwidth": 560.1200384553522,
+  "leavePattern": 564.7232823539525,
+  "buddataset": 186.12197204492986,
+  "crossSection": 371.7491540592164
+ },
+ "dinov2_ms_per_crop": {
+  "leafwidth": 7.3903880547732115,
+  "leavePattern": 7.415177999064326,
+  "buddataset": 7.4179405346512794,
+  "crossSection": 7.416469976305962
+ },
+ "fusion_ms_per_specimen": 1.7814277671277523,
+ "total_ms_per_specimen": 1714.1358512453735,
+ "peak_gpu_memory_MB": 2114.4169921875
+}

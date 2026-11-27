@@ -1,0 +1,320 @@
+{
+ "dataset": {
+  "n": 981,
+  "u": 905,
+  "d": 76,
+  "g": 83,
+  "s": 516,
+  "q": 465
+ },
+ "audit_best": {
+  "full": 0.9389080522536689,
+  "bg": 0.9422177962033057,
+  "bgpatch": 0.9489704694752527,
+  "leaf": 0.8467329873068218,
+  "tiles": 0.8868240818769014
+ },
+ "proposed_resnet50": {
+  "acc": 0.9065649564291034,
+  "macro_f1": 0.9031136509813774,
+  "macro_auc": 0.9839633240690087,
+  "macro_ap": 0.9600099952990339,
+  "bal_acc": 0.916680887635367,
+  "kappa": 0.8812960569602899,
+  "acc_std": 0.058600310156119495,
+  "acc_ci95": [
+   0.8823759372606692,
+   0.9307539755975376
+  ]
+ },
+ "proposed_dinov2_s": {
+  "acc": 0.9221941089869672,
+  "macro_f1": 0.920446885738125,
+  "macro_auc": 0.9865809231615222,
+  "macro_ap": 0.971842794176113,
+  "bal_acc": 0.93204088807883,
+  "kappa": 0.9010043650615054,
+  "acc_std": 0.05080875736051089,
+  "acc_ci95": [
+   0.9012212847400741,
+   0.9431669332338602
+  ]
+ },
+ "xboard": {
+  "resnet50_deep_full": [
+   0.5456349938788964,
+   0.7329861111111111
+  ],
+  "resnet50_legacy34": [
+   0.4665663433468311,
+   0.6568148148148149
+  ],
+  "resnet50_deep_leaf": [
+   0.5269360237652921,
+   0.5096388888888889
+  ],
+  "resnet50_hand164": [
+   0.5296329563646637,
+   0.6016064814814814
+  ],
+  "resnet50_proposed": [
+   0.6278644282546721,
+   0.633912037037037
+  ],
+  "dinov2_s_deep_full": [
+   0.6009789999058291,
+   0.7296157407407408
+  ],
+  "dinov2_s_deep_leaf": [
+   0.5621165834824371,
+   0.5269165173237754
+  ],
+  "dinov2_s_proposed": [
+   0.6104209607136436,
+   0.6707519414575867
+  ]
+ },
+ "swap": {
+  "resnet50_deep_full": [
+   0.20897043832823647,
+   0.5423037716615698
+  ],
+  "resnet50_legacy34": [
+   0.1452599388379205,
+   0.5056065239551477
+  ],
+  "resnet50_deep_leaf": [
+   0.7517838939857289,
+   0.06931702344546381
+  ],
+  "resnet50_hand164": [
+   0.8154943934760448,
+   0.0509683995922528
+  ],
+  "resnet50_proposed": [
+   0.8965341488277268,
+   0.028542303771661573
+  ],
+  "dinov2_s_deep_full": [
+   0.2375127420998981,
+   0.5672782874617737
+  ],
+  "dinov2_s_deep_leaf": [
+   0.8307849133537206,
+   0.04281345565749235
+  ],
+  "dinov2_s_proposed": [
+   0.9087665647298675,
+   0.027522935779816515
+  ]
+ },
+ "efficiency": {
+  "resnet50": {
+   "backbone": "resnet50",
+   "median_ms": {
+    "baseline": {
+     "preprocess": 6.31,
+     "backbone": 120.79,
+     "classifier": 3.23,
+     "total": 130.44
+    },
+    "proposed": {
+     "segmentation": 236.79,
+     "views": 31.78,
+     "backbone": 521.79,
+     "handcrafted": 160.24,
+     "fusion+svm": 2.84,
+     "total": 955.16
+    }
+   },
+   "legacy_handcrafted_ms": 25.9,
+   "backbone_params_M": 23.51,
+   "backbone_MB": 90.0,
+   "fusion_params_K": 703.2,
+   "fusion_MB": 2.69,
+   "svm_baseline_MB": 10.37,
+   "svm_proposed_MB": 0.18,
+   "n_sv_baseline": 659,
+   "n_sv_proposed": 176,
+   "feature_dim_baseline": 2048,
+   "feature_dim_proposed_in": 4260,
+   "feature_dim_proposed_fused": 128,
+   "peak_rss_increase_MB": 118.9,
+   "process_peak_MB": 865.0,
+   "cpu": "Intel Core i7-10610U (4C/8T), 16 GB RAM, torch threads=4, batch size 1"
+  },
+  "dinov2_s": {
+   "backbone": "dinov2_s",
+   "median_ms": {
+    "baseline": {
+     "preprocess": 6.29,
+     "backbone": 109.64,
+     "classifier": 1.67,
+     "total": 117.73
+    },
+    "proposed": {
+     "segmentation": 227.22,
+     "views": 31.54,
+     "backbone": 512.27,
+     "handcrafted": 149.2,
+     "fusion+svm": 2.54,
+     "total": 923.21
+    }
+   },
+   "legacy_handcrafted_ms": 25.17,
+   "backbone_params_M": 21.63,
+   "backbone_MB": 82.6,
+   "fusion_params_K": 370.4,
+   "fusion_MB": 1.42,
+   "svm_baseline_MB": 3.73,
+   "svm_proposed_MB": 0.18,
+   "n_sv_baseline": 629,
+   "n_sv_proposed": 173,
+   "feature_dim_baseline": 768,
+   "feature_dim_proposed_in": 1700,
+   "feature_dim_proposed_fused": 128,
+   "peak_rss_increase_MB": 51.3,
+   "process_peak_MB": 755.0,
+   "cpu": "Intel Core i7-10610U (4C/8T), 16 GB RAM, torch threads=4, batch size 1"
+  },
+  "effnet_b0": {
+   "backbone": "effnet_b0",
+   "median_ms": {
+    "baseline": {
+     "preprocess": 6.44,
+     "backbone": 46.09,
+     "classifier": 2.31,
+     "total": 54.38
+    },
+    "proposed": {
+     "segmentation": 224.84,
+     "views": 31.48,
+     "backbone": 171.46,
+     "handcrafted": 152.65,
+     "fusion+svm": 2.64,
+     "total": 583.76
+    }
+   },
+   "legacy_handcrafted_ms": 26.17,
+   "backbone_params_M": 4.01,
+   "backbone_MB": 15.6,
+   "fusion_params_K": 503.5,
+   "fusion_MB": 1.93,
+   "svm_baseline_MB": 6.34,
+   "svm_proposed_MB": 0.19,
+   "n_sv_baseline": 644,
+   "n_sv_proposed": 182,
+   "feature_dim_baseline": 1280,
+   "feature_dim_proposed_in": 2724,
+   "feature_dim_proposed_fused": 128,
+   "peak_rss_increase_MB": 117.8,
+   "process_peak_MB": 652.0,
+   "cpu": "Intel Core i7-10610U (4C/8T), 16 GB RAM, torch threads=4, batch size 1"
+  },
+  "mobilenetv3": {
+   "backbone": "mobilenetv3",
+   "median_ms": {
+    "baseline": {
+     "preprocess": 6.77,
+     "backbone": 29.74,
+     "classifier": 2.18,
+     "total": 38.99
+    },
+    "proposed": {
+     "segmentation": 242.23,
+     "views": 35.24,
+     "backbone": 100.4,
+     "handcrafted": 164.2,
+     "fusion+svm": 2.7,
+     "total": 539.37
+    }
+   },
+   "legacy_handcrafted_ms": 26.03,
+   "backbone_params_M": 4.2,
+   "backbone_MB": 16.2,
+   "fusion_params_K": 503.5,
+   "fusion_MB": 1.93,
+   "svm_baseline_MB": 5.83,
+   "svm_proposed_MB": 0.17,
+   "n_sv_baseline": 592,
+   "n_sv_proposed": 162,
+   "feature_dim_baseline": 1280,
+   "feature_dim_proposed_in": 2724,
+   "feature_dim_proposed_fused": 128,
+   "peak_rss_increase_MB": 105.4,
+   "process_peak_MB": 641.0,
+   "cpu": "Intel Core i7-10610U (4C/8T), 16 GB RAM, torch threads=4, batch size 1"
+  },
+  "convnext_t": {
+   "backbone": "convnext_t",
+   "median_ms": {
+    "baseline": {
+     "preprocess": 6.43,
+     "backbone": 102.06,
+     "classifier": 1.81,
+     "total": 110.22
+    },
+    "proposed": {
+     "segmentation": 234.13,
+     "views": 33.09,
+     "backbone": 427.26,
+     "handcrafted": 148.88,
+     "fusion+svm": 2.57,
+     "total": 845.46
+    }
+   },
+   "legacy_handcrafted_ms": 27.78,
+   "backbone_params_M": 27.82,
+   "backbone_MB": 106.2,
+   "fusion_params_K": 370.4,
+   "fusion_MB": 1.42,
+   "svm_baseline_MB": 3.93,
+   "svm_proposed_MB": 0.15,
+   "n_sv_baseline": 663,
+   "n_sv_proposed": 151,
+   "feature_dim_baseline": 768,
+   "feature_dim_proposed_in": 1700,
+   "feature_dim_proposed_fused": 128,
+   "peak_rss_increase_MB": 121.7,
+   "process_peak_MB": 894.0,
+   "cpu": "Intel Core i7-10610U (4C/8T), 16 GB RAM, torch threads=4, batch size 1"
+  }
+ },
+ "confusion_dinov2_s": [
+  [
+   200.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  [
+   0.4,
+   188.6,
+   0.8,
+   6.4,
+   3.8
+  ],
+  [
+   0.0,
+   4.4,
+   163.0,
+   9.6,
+   22.0
+  ],
+  [
+   0.0,
+   5.0,
+   1.6,
+   189.6,
+   3.8
+  ],
+  [
+   3.4,
+   7.6,
+   8.4,
+   3.4,
+   159.2
+  ]
+ ]
+}

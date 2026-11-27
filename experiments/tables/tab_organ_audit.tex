@@ -1,0 +1,19 @@
+\begin{table*}[tbp]
+\centering
+\footnotesize
+\caption{Balanced accuracy (\%) of four views of each organ image.}
+\label{tab:organ_audit}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lcccccccc}
+\toprule
+ & \multicolumn{4}{c}{Grouped CV} & \multicolumn{4}{c}{Session-level CV} \\ \cmidrule(lr){2-5}\cmidrule(lr){6-9}
+Organ & Full image & Corners & Background & Organ & Full image & Corners & Background & Organ \\
+\midrule
+Leaf blade & 94.1 & 93.4 & 94.3 & 82.6 & 79.1 & 73.0 & 76.2 & 69.1 \\
+Leaf top & 98.3 & 95.0 & 97.7 & 92.1 & 84.7 & 83.8 & 84.8 & 78.5 \\
+Bud & 97.7 & 97.6 & 97.9 & 91.3 & 90.7 & 88.8 & 88.4 & 73.6 \\
+Cross-section & 98.6 & 95.7 & 98.1 & 93.0 & 79.8 & 72.2 & 74.4 & 78.6 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table*}

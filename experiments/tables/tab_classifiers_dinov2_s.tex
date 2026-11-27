@@ -1,0 +1,20 @@
+\begin{table}[tbp]
+\centering
+\small
+\caption{Classifiers trained on the 128-D leaf-blade code (DINOv2 ViT-S/14).}
+\label{tab:classifiers}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lccc}
+\toprule
+Classifier on fused 128-D embedding & Accuracy (\%) & Macro-F1 (\%) & Predict (ms/img) \\
+\midrule
+SVM (RBF) & 91.27 $\pm$ 5.52 & 90.81 $\pm$ 6.06 & 0.123 \\
+Softmax head & 91.42 $\pm$ 5.24 & 91.02 $\pm$ 5.65 & 0.068 \\
+$k$-NN ($k=5$) & 91.40 $\pm$ 5.42 & 90.95 $\pm$ 5.93 & 0.175 \\
+Random forest (300 trees) & 91.33 $\pm$ 5.49 & 90.90 $\pm$ 5.99 & 0.514 \\
+Decision tree & 86.74 $\pm$ 7.00 & 86.03 $\pm$ 7.91 & 0.058 \\
+Gaussian naive Bayes & 91.05 $\pm$ 5.61 & 90.57 $\pm$ 6.21 & 0.069 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

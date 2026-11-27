@@ -1,0 +1,58 @@
+% Background robustness of leaf-blade representations: (a) accuracy on original vs. background-swapped images,
+% (b) predictions that follow the pasted board, (c) cross-board transfer.
+% Build:  python make_fig_robust_leak_data.py
+%         pdflatex fig_robust.tex && pdftoppm -png -r 600 -singlefile fig_robust.pdf fig_robust
+\documentclass[border=3pt]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[scaled=0.92]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{sansmath}
+\sansmath
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{groupplots}
+
+\pgfplotsset{
+  every axis/.append style={font=\small,line width=0.6pt,tick style={line width=0.6pt,black},
+    axis line style={black},label style={font=\small},tick label style={font=\small},
+    title style={font=\normalsize\bfseries,yshift=-2pt}},
+  b1/.style={fill=black!18,draw=black},
+  b2/.style={fill=black!70,draw=black},
+  % legend below each panel, one row
+  panel legend/.style={legend columns=-1,reverse legend,
+    legend style={draw=none,fill=none,font=\small,at={(0.5,-0.2)},anchor=north,
+      /tikz/column 1/.style={column sep=0.1cm},/tikz/column 2/.style={column sep=0.45cm},
+      /tikz/column 3/.style={column sep=0.1cm}},
+    legend image code/.code={\draw[##1,line width=0.6pt] (0cm,-0.1cm) rectangle (0.28cm,0.12cm);}},
+}
+
+\begin{document}
+\begin{tikzpicture}
+\begin{groupplot}[group style={group size=3 by 1,horizontal sep=0.45cm,yticklabels at=edge left},
+    scale only axis,width=3.7cm,height=5.4cm,
+    xbar=0pt,/pgf/bar width=0.24cm,enlarge y limits={abs=0.45},
+    ymin=0,ymax=7,ytick={0,...,7},ytick style={draw=none},
+    yticklabels={\textbf{Leaf-blade encoder (DINOv2)},\textbf{Leaf-blade encoder (ResNet50)},164-D leaf handcrafted,
+      Leaf only (DINOv2),Leaf only (ResNet50),34-D global handcrafted,Full image (DINOv2),Full image (ResNet50)},
+    xmajorgrids,grid style={black!12,line width=0.4pt},xmin=0]
+  % ---------------------------------------------------------------- (a) background swap
+  \nextgroupplot[title={(a) Background swap},xmax=100,xtick={0,25,50,75,100},xlabel={Accuracy (\%)},panel legend]
+  \draw[black!45,dashed,line width=0.5pt] (axis cs:0,4.5) -- (axis cs:100,4.5);
+  % xbar draws later series above earlier ones: add the lower bar first; reverse legend gives reading order
+  \addplot[b2] table[x=swap,y=y] {data/fig_robust.dat};
+  \addplot[b1] table[x=orig,y=y] {data/fig_robust.dat};
+  \legend{Swapped,Original}
+  % ---------------------------------------------------------------- (b) follow rate
+  \nextgroupplot[title={(b) Follows pasted board},xmax=60,xtick={0,20,40,60},xlabel={Predictions (\%)},xbar=0pt,
+    /pgf/bar width=0.36cm]
+  \draw[black!45,dashed,line width=0.5pt] (axis cs:0,4.5) -- (axis cs:60,4.5);
+  \addplot[b2] table[x=follow,y=y] {data/fig_robust.dat};
+  % ---------------------------------------------------------------- (c) cross-board transfer
+  \nextgroupplot[title={(c) Cross-board transfer},xmax=100,xtick={0,25,50,75,100},xlabel={Balanced accuracy (\%)},panel legend]
+  \draw[black!45,dashed,line width=0.5pt] (axis cs:0,4.5) -- (axis cs:100,4.5);
+  \addplot[b2] table[x=x_sq_st,y=y] {data/fig_robust.dat};
+  \addplot[b1] table[x=x_st_sq,y=y] {data/fig_robust.dat};
+  \legend{Square$\rightarrow$striped,Striped$\rightarrow$square}
+\end{groupplot}
+\end{tikzpicture}
+\end{document}

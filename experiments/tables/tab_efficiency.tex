@@ -1,0 +1,19 @@
+\begin{table*}[tbp]
+\centering
+\footnotesize
+\caption{Inference cost of the leaf-blade encoder per image on a laptop CPU (ms).}
+\label{tab:efficiency}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lccccccccc}
+\toprule
+Backbone & Baseline total & Segm. & Views & Backbone ($\times$5) & Handcrafted & Fusion+SVM & Encoder total & Model size (MB) & Peak RAM (MB) \\
+\midrule
+ResNet50 & 130 & 237 & 32 & 522 & 160 & 2.8 & 955 & 92.9 & 865 \\
+DINOv2 ViT-S/14 & 118 & 227 & 32 & 512 & 149 & 2.5 & 923 & 84.2 & 755 \\
+EfficientNet-B0 & 54 & 225 & 31 & 171 & 153 & 2.6 & 584 & 17.7 & 652 \\
+MobileNetV3-L & 39 & 242 & 35 & 100 & 164 & 2.7 & 539 & 18.3 & 641 \\
+ConvNeXt-T & 110 & 234 & 33 & 427 & 149 & 2.6 & 845 & 107.8 & 894 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table*}

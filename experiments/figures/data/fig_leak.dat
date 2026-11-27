@@ -1,0 +1,6 @@
+id label random dup group
+0 Full~image~(ResNet50) 98.33 nan 89.37
+1 Full~image~(DINOv2) 98.57 97.95 93.89
+2 34-D~global~handcrafted 98.70 nan 92.50
+3 164-D~leaf~handcrafted 97.29 nan 83.23
+4 Leaf-blade~encoder~(DINOv2) 99.16 98.80 92.22

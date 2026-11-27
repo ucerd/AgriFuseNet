@@ -1,0 +1,15 @@
+# Tested versions; newer releases are expected to work.
+numpy==2.2.6
+pandas==2.2.3
+pyarrow==20.0.0
+scipy==1.13.1
+scikit-learn==1.6.0
+scikit-image==0.25.0
+opencv-python==4.11.0.86
+pillow==10.2.0
+torch==2.5.1
+torchvision==0.20.1
+timm==1.0.26
+psutil==6.1.1
+# Segment Anything 3 (organ masks and the GPU benchmark); requires a Transformers release with Sam3Model
+transformers==5.22.1

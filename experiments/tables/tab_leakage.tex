@@ -1,0 +1,19 @@
+\begin{table*}[tbp]
+\centering
+\small
+\caption{Effect of the splitting protocol on accuracy (\%, mean $\pm$ SD).}
+\label{tab:leakage}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lcccc}
+\toprule
+Representation (SVM) & Random 5-fold & Duplicate-grouped & Sequence-grouped & $\Delta$ (pp) \\
+\midrule
+ResNet50, full image & 98.33 $\pm$ 1.01 & -- & 89.37 $\pm$ 4.18 & 8.96 \\
+34-D global handcrafted, full image & 98.70 $\pm$ 0.94 & -- & 92.50 $\pm$ 3.79 & 6.20 \\
+Leaf-only 164-D handcrafted (ours) & 97.29 $\pm$ 1.35 & -- & 83.23 $\pm$ 6.63 & 14.06 \\
+DINOv2 ViT-S/14, full image & 98.57 $\pm$ 0.87 & 97.95 $\pm$ 1.56 & 93.89 $\pm$ 2.91 & 4.68 \\
+Leaf-blade encoder (DINOv2 ViT-S/14) & 99.16 $\pm$ 0.53 & 98.80 $\pm$ 0.95 & 92.22 $\pm$ 5.08 & 6.94 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table*}

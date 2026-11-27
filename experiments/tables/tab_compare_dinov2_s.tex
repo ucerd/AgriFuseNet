@@ -1,0 +1,26 @@
+\begin{table*}[tbp]
+\centering
+\footnotesize
+\caption{Comparison of leaf-blade representations with the DINOv2 ViT-S/14 backbone (mean $\pm$ SD over 25 splits).}
+\label{tab:compare_dinov2_s}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{llcccccc}
+\toprule
+Representation & Input & Dim. & Accuracy (\%) & Macro-F1 (\%) & Macro-AUC & Macro-AP & $p$ vs.\ leaf-blade encoder \\
+\midrule
+Deep, full image & Full & 768 & 93.89 $\pm$ 2.91 & 93.65 $\pm$ 3.36 & 0.9916 & 0.9749 & 0.510 \\
+Deep, full image + PCA-128 & Full & 128 & 93.04 $\pm$ 3.06 & 92.75 $\pm$ 3.44 & 0.9896 & 0.9683 & 0.714 \\
+Deep, full image + LDA-4 & Full & 4 & 71.79 $\pm$ 7.15 & 70.74 $\pm$ 6.33 & 0.9009 & 0.7503 & $<$0.001 \\
+34-D global handcrafted (GLCM, LBP, colour) & Full & 34 & 92.50 $\pm$ 3.79 & 92.43 $\pm$ 3.56 & 0.9793 & 0.9571 & 0.910 \\
+Concat. deep + 34-D handcrafted & Full & 802 & 94.02 $\pm$ 3.63 & 93.68 $\pm$ 4.53 & 0.9909 & 0.9733 & 0.469 \\
+Concat. deep + 34-D handcrafted + PCA-128 & Full & 128 & 93.30 $\pm$ 3.45 & 93.15 $\pm$ 4.19 & 0.9897 & 0.9696 & 0.626 \\
+Scalar-gated attention fusion (128-D) & Full & 128 & 94.74 $\pm$ 1.88 & 94.46 $\pm$ 2.13 & 0.9929 & 0.9810 & 0.313 \\
+\midrule
+Deep, leaf only & Leaf & 768 & 84.67 $\pm$ 4.27 & 84.01 $\pm$ 4.55 & 0.9638 & 0.8944 & 0.001 \\
+Concat. leaf + tiles + 164-D handcrafted & Leaf & 1700 & 90.78 $\pm$ 4.54 & 90.17 $\pm$ 4.65 & 0.9815 & 0.9443 & 0.377 \\
+Concat. leaf + tiles + 164-D handcrafted + PCA-128 & Leaf & 128 & 89.92 $\pm$ 4.50 & 89.31 $\pm$ 4.69 & 0.9806 & 0.9414 & 0.204 \\
+\textbf{Leaf-blade encoder (128-D)} & Leaf & 128 & 92.22 $\pm$ 5.08 & 92.04 $\pm$ 5.08 & 0.9866 & 0.9718 & -- \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table*}

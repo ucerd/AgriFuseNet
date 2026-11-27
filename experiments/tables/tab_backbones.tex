@@ -1,0 +1,19 @@
+\begin{table*}[tbp]
+\centering
+\footnotesize
+\caption{Effect of the frozen backbone on the leaf-blade encoder.}
+\label{tab:backbones}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lccccc}
+\toprule
+Backbone & Params (M) & Deep full image & Leaf-blade encoder acc. & Macro-F1 & Latency (ms) \\
+\midrule
+ResNet50 & 23.51 & 89.37 $\pm$ 4.18 & 90.66 $\pm$ 5.86 & 90.31 $\pm$ 5.92 & 955 \\
+DINOv2 ViT-S/14 & 21.63 & 93.89 $\pm$ 2.91 & 92.22 $\pm$ 5.08 & 92.04 $\pm$ 5.08 & 923 \\
+ConvNeXt-T & 27.82 & 92.78 $\pm$ 2.74 & 91.11 $\pm$ 5.74 & 90.92 $\pm$ 5.75 & 845 \\
+EfficientNet-B0 & 4.01 & 94.28 $\pm$ 3.40 & 89.25 $\pm$ 5.95 & 88.72 $\pm$ 5.69 & 584 \\
+MobileNetV3-L & 4.2 & 94.19 $\pm$ 2.65 & 88.61 $\pm$ 6.15 & 88.06 $\pm$ 5.98 & 539 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table*}

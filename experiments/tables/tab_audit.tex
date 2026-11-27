@@ -1,0 +1,21 @@
+\begin{table*}[tbp]
+\centering
+\small
+\caption{Accuracy (\%) of leaf-blade image views for five backbones.}
+\label{tab:audit}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lccccc}
+\toprule
+Features & Full image & Background (leaf masked) & Background patches only & Leaf only & Rectified leaf tiles \\
+\midrule
+ResNet50 & 89.37 $\pm$ 4.18 & 91.45 $\pm$ 4.73 & 92.18 $\pm$ 4.00 & 75.95 $\pm$ 6.57 & 84.46 $\pm$ 6.52 \\
+DINOv2 ViT-S/14 & 93.89 $\pm$ 2.91 & 94.22 $\pm$ 3.84 & 94.90 $\pm$ 4.33 & 84.67 $\pm$ 4.27 & 88.68 $\pm$ 5.07 \\
+ConvNeXt-T & 92.78 $\pm$ 2.74 & 93.35 $\pm$ 3.43 & 94.10 $\pm$ 3.33 & 77.43 $\pm$ 6.30 & 87.15 $\pm$ 5.20 \\
+EfficientNet-B0 & 94.28 $\pm$ 3.40 & 95.30 $\pm$ 2.89 & 92.94 $\pm$ 4.23 & 76.72 $\pm$ 8.35 & 85.80 $\pm$ 5.30 \\
+MobileNetV3-L & 94.19 $\pm$ 2.65 & 94.09 $\pm$ 4.31 & 94.71 $\pm$ 4.20 & 76.73 $\pm$ 6.77 & 85.35 $\pm$ 6.10 \\
+\midrule
+Handcrafted & 92.50 $\pm$ 3.79 & -- & -- & 83.23 $\pm$ 6.63 & -- \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table*}

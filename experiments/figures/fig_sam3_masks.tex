@@ -1,0 +1,32 @@
+% Fig. 2 -- SAM 3 organ masks for the four organs and five varieties (prompts are given in the text).
+% Build:  python make_fig2_assets.py   (overlays; selection in fig2_selection.csv)
+%         pdflatex fig_sam3_masks.tex && pdftoppm -png -r 600 -singlefile fig_sam3_masks.pdf fig_sam3_masks
+\documentclass[border=3pt]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[scaled=0.92]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+\definecolor{ink}{HTML}{1F1F1F}
+
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=1cm]
+\def\cell{2.7}   % cell size (cm)
+\def\gap{0.12}   % gap between cells (cm)
+
+% columns: varieties
+\foreach \v [count=\j from 0] in {CP77-400,CPF-237,CPF-250,CPF-251,CPF-253}{
+  \node[font=\normalsize\bfseries,text=ink,anchor=base] at (\j*\cell+\j*\gap+\cell/2,0.25) {\v};
+}
+% rows: organs
+\foreach \o/\lab [count=\i from 0] in {leafwidth/Leaf blade, leavePattern/Leaf top, buddataset/Bud, crossSection/Cross-section}{
+  \pgfmathsetmacro{\yc}{-\i*\cell-\i*\gap-\cell/2}
+  \node[rotate=90,text=ink,anchor=south,font=\normalsize\bfseries] at (-0.12,\yc) {\lab};
+  \foreach \v [count=\j from 0] in {CP77-400,CPF-237,CPF-250,CPF-251,CPF-253}{
+    \node[inner sep=0pt,anchor=north west,draw=ink!35,line width=0.3pt]
+      at (\j*\cell+\j*\gap,-\i*\cell-\i*\gap) {\includegraphics[width=\cell cm]{assets/fig2/\o_\v.png}};
+  }
+}
+\end{tikzpicture}
+\end{document}

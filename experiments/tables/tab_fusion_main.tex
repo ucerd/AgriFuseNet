@@ -1,0 +1,28 @@
+\begin{table*}[tbp]
+\centering
+\footnotesize
+\caption{Multi-organ variety identification: fusion methods and ablation (accuracy, \%, mean $\pm$ SD).}
+\label{tab:fusion_main}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lccccc}
+\toprule
+ & \multicolumn{2}{c}{Grouped CV} & \multicolumn{2}{c}{Session-level CV} & \\ \cmidrule(lr){2-3}\cmidrule(lr){4-5}
+ & Leaf blade + top & All four organs & Leaf blade + top & All four organs & $p$ \\
+\midrule
+\multicolumn{6}{l}{\emph{Fusion method}} \\
+Late fusion (score sum) & 95.22 $\pm$ 4.45 & 99.72 $\pm$ 0.43 & 85.37 $\pm$ 4.15 & 94.50 $\pm$ 4.64 & 0.267 \\
+Early fusion (concatenation + SVM) & 96.48 $\pm$ 2.87 & 99.61 $\pm$ 0.32 & 86.43 $\pm$ 8.52 & 93.73 $\pm$ 5.74 & 0.032 \\
+Organ-set fusion, attention pooling & 98.09 $\pm$ 1.61 & 99.91 $\pm$ 0.17 & 88.47 $\pm$ 7.68 & 94.00 $\pm$ 7.59 & 0.359 \\
+\textbf{Organ-set fusion, mean pooling (proposed)} & 98.32 $\pm$ 1.25 & 99.98 $\pm$ 0.05 & 92.53 $\pm$ 5.81 & 97.90 $\pm$ 3.47 & -- \\
+\midrule
+\multicolumn{6}{l}{\emph{Ablation of the organ-set model}} \\
+\quad without organ dropout & 96.46 $\pm$ 2.11 & 99.85 $\pm$ 0.23 & 88.30 $\pm$ 8.07 & 95.83 $\pm$ 6.53 & 0.296 \\
+\quad without train-time augmentation & 98.37 $\pm$ 1.25 & 99.97 $\pm$ 0.05 & 92.20 $\pm$ 5.79 & 97.77 $\pm$ 3.44 & 0.797 \\
+\quad leaf encoder without botanical descriptors & 98.27 $\pm$ 1.38 & 99.98 $\pm$ 0.04 & 93.57 $\pm$ 4.79 & 98.27 $\pm$ 2.83 & 0.891 \\
+\quad leaf encoder replaced by the SAM~3 leaf-crop embedding & 97.74 $\pm$ 1.44 & 99.95 $\pm$ 0.08 & 90.90 $\pm$ 4.40 & 97.77 $\pm$ 3.09 & 0.515 \\
+\quad test specimens paired within capture periods & 98.49 $\pm$ 1.26 & 99.97 $\pm$ 0.07 & -- & -- & 0.847 \\
+\quad late fusion, test specimens paired within capture periods & 95.68 $\pm$ 3.91 & 99.75 $\pm$ 0.34 & -- & -- & 0.225 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table*}

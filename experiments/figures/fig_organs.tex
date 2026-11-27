@@ -1,0 +1,70 @@
+% Fig. 3 -- (a, b) accuracy vs. number of available organs, organ-set fusion vs. late fusion, grouped and
+% session-level CV; (c) confusion matrix of the four-organ model under session-level CV.
+% Build:  python make_fig3_data.py
+%         pdflatex fig_organs.tex && pdftoppm -png -r 600 -singlefile fig_organs.pdf fig_organs
+\documentclass[border=3pt]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[scaled=0.92]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{sansmath}
+\sansmath
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{groupplots}
+
+\definecolor{ink}{HTML}{1F1F1F}
+\pgfplotsset{
+  every axis/.append style={font=\small,line width=0.6pt,tick style={line width=0.6pt,black},
+    axis line style={black},label style={font=\small},tick label style={font=\small},
+    title style={font=\normalsize\bfseries,yshift=-2pt}},
+  set/.style={black,line width=1.1pt,mark=*,mark size=2.4pt,mark options={solid,fill=black}},
+  late/.style={black!55,line width=1.1pt,dashed,mark=square*,mark size=2.2pt,mark options={solid,fill=black!55}},
+  setdot/.style={only marks,mark=*,mark size=1.2pt,black,fill opacity=0.35,draw opacity=0.35},
+  latedot/.style={only marks,mark=square*,mark size=1.1pt,black!55,fill opacity=0.35,draw opacity=0.35},
+}
+
+\begin{document}
+\begin{tikzpicture}
+\begin{groupplot}[group style={group size=2 by 1,horizontal sep=1.35cm},
+    scale only axis,width=4.2cm,height=4.2cm,xmin=0.6,xmax=4.4,ymin=70,ymax=101,xtick={1,2,3,4},ytick={70,75,...,100},
+    xlabel={Number of organs},ymajorgrids,grid style={black!12,line width=0.4pt},
+    % one horizontal legend centred below panels (a) and (b); long sample lines with a single centred marker
+    legend columns=2,
+    legend style={draw=none,fill=none,font=\small,cells={anchor=west},
+      /tikz/column 1/.style={column sep=0.15cm},/tikz/column 2/.style={column sep=0.9cm},
+      /tikz/column 3/.style={column sep=0.15cm},
+      at={(1.161,-0.3)},anchor=north},
+    legend image code/.code={\draw[mark repeat=2,mark phase=2,#1] plot coordinates {(0cm,0cm) (0.45cm,0cm) (0.9cm,0cm)};}]
+  % ---------------------------------------------------------------- (a) grouped CV
+  \nextgroupplot[title={(a) Grouped CV},ylabel={Accuracy (\%)}]
+  \addplot[setdot]  table[x expr=\thisrow{n_organs}+0.09,y=acc] {data/fig3_grouped_set_mean_subsets.dat};
+  \addplot[latedot] table[x expr=\thisrow{n_organs}-0.09,y=acc] {data/fig3_grouped_late_sum_subsets.dat};
+  \addplot[set]  table[x=n_organs,y=acc] {data/fig3_grouped_set_mean_mean.dat};
+  \addplot[late] table[x=n_organs,y=acc] {data/fig3_grouped_late_sum_mean.dat};
+  \legend{,,Organ-set fusion,Late fusion}
+  % ---------------------------------------------------------------- (b) session-level CV
+  \nextgroupplot[title={(b) Session-level CV}]
+  \addplot[setdot]  table[x expr=\thisrow{n_organs}+0.09,y=acc] {data/fig3_session_set_mean_subsets.dat};
+  \addplot[latedot] table[x expr=\thisrow{n_organs}-0.09,y=acc] {data/fig3_session_late_sum_subsets.dat};
+  \addplot[set]  table[x=n_organs,y=acc] {data/fig3_session_set_mean_mean.dat};
+  \addplot[late] table[x=n_organs,y=acc] {data/fig3_session_late_sum_mean.dat};
+\end{groupplot}
+
+% ---------------------------------------------------------------- (c) confusion matrix
+\begin{axis}[at={(group c2r1.north east)},anchor=north west,xshift=2.7cm,
+    scale only axis,width=4.2cm,height=4.2cm,title={(c) Four organs, session-level},
+    colormap={greys}{color=(white) color=(black!55)},point meta min=0,point meta max=100,
+    enlargelimits=false,axis on top,
+    xtick={0,...,4},ytick={0,...,4},y dir=reverse,
+    xticklabels={CP77-400,CPF-237,CPF-250,CPF-251,CPF-253},yticklabels={CP77-400,CPF-237,CPF-250,CPF-251,CPF-253},
+    x tick label style={rotate=40,anchor=north east,font=\footnotesize},y tick label style={font=\footnotesize},
+    xlabel={Predicted variety},ylabel={True variety},
+    tick style={draw=none},
+    nodes near coords={\pgfmathprintnumber[fixed,precision=1]{\pgfplotspointmeta}},
+    every node near coord/.append style={font=\footnotesize,text=ink,anchor=center},
+    colorbar,colorbar style={width=0.22cm,ytick={0,50,100},yticklabel style={font=\footnotesize},
+      ylabel={\% of true variety},ylabel style={font=\footnotesize}}]
+  \addplot[matrix plot*,mesh/cols=5,point meta=explicit] table[x=pred,y=true,meta=pct] {data/fig3_confusion.dat};
+\end{axis}
+\end{tikzpicture}
+\end{document}

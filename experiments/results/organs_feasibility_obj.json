@@ -1,0 +1,222 @@
+{
+ "per_category": {
+  "buddataset": {
+   "n": 1000,
+   "classes": [
+    "CP77-400",
+    "CPF-237",
+    "CPF-250",
+    "CPF-251",
+    "CPF-253"
+   ],
+   "n_groups": 94,
+   "obj": {
+    "grouped_acc": 0.9103333333333333,
+    "grouped_bal": 0.9103333333333333,
+    "session_acc": 0.736,
+    "session_bal": 0.736
+   },
+   "bgonly": {
+    "grouped_acc": 0.9786666666666667,
+    "grouped_bal": 0.9786666666666667,
+    "session_acc": 0.884,
+    "session_bal": 0.884
+   }
+  },
+  "crossSection": {
+   "n": 974,
+   "classes": [
+    "CP77-400",
+    "CPF-237",
+    "CPF-250",
+    "CPF-251",
+    "CPF-253"
+   ],
+   "n_groups": 76,
+   "obj": {
+    "grouped_acc": 0.9305270362765229,
+    "grouped_bal": 0.9304260483124959,
+    "session_acc": 0.784394250513347,
+    "session_bal": 0.7862222412954539
+   },
+   "bgonly": {
+    "grouped_acc": 0.9856262833675564,
+    "grouped_bal": 0.9855014161874518,
+    "session_acc": 0.7453798767967146,
+    "session_bal": 0.7436515034474865
+   }
+  },
+  "leafwidth": {
+   "n": 981,
+   "classes": [
+    "CP77-400",
+    "CPF-237",
+    "CPF-250",
+    "CPF-251",
+    "CPF-253"
+   ],
+   "n_groups": 87,
+   "obj": {
+    "grouped_acc": 0.8287461773700305,
+    "grouped_bal": 0.8280234689933182,
+    "session_acc": 0.6921508664627931,
+    "session_bal": 0.6910890165111271
+   },
+   "bgonly": {
+    "grouped_acc": 0.9466530750934421,
+    "grouped_bal": 0.9456283431811071,
+    "session_acc": 0.762487257900102,
+    "session_bal": 0.762219393671655
+   }
+  },
+  "leavePattern": {
+   "n": 824,
+   "classes": [
+    "CP77-400",
+    "CPF-237",
+    "CPF-250",
+    "CPF-251",
+    "CPF-253"
+   ],
+   "n_groups": 66,
+   "obj": {
+    "grouped_acc": 0.9393203883495146,
+    "grouped_bal": 0.9338155410312273,
+    "session_acc": 0.7621359223300971,
+    "session_bal": 0.7854204793028323
+   },
+   "bgonly": {
+    "grouped_acc": 0.9801779935275081,
+    "grouped_bal": 0.9821771968046478,
+    "session_acc": 0.8264563106796117,
+    "session_bal": 0.8477668845315904
+   }
+  }
+ },
+ "fusion": {
+  "leaf model only [obj]": {
+   "grouped": 0.9114999999999999,
+   "session": 0.7955
+  },
+  "leaf model only [bgonly]": {
+   "grouped": 0.9114999999999999,
+   "session": 0.7955
+  },
+  "leaf width only [obj]": {
+   "grouped": 0.8288333333333333,
+   "session": 0.6945
+  },
+  "leaf width only [bgonly]": {
+   "grouped": 0.943,
+   "session": 0.7595
+  },
+  "leaf model + leaf pattern [obj]": {
+   "grouped": 0.9590000000000001,
+   "session": 0.861
+  },
+  "leaf model + leaf pattern [bgonly]": {
+   "grouped": 0.9728333333333333,
+   "session": 0.8640000000000001
+  },
+  "leaf width + leaf pattern [obj]": {
+   "grouped": 0.9463333333333335,
+   "session": 0.8029999999999999
+  },
+  "leaf width + leaf pattern [bgonly]": {
+   "grouped": 0.9946666666666667,
+   "session": 0.8690000000000001
+  },
+  "all organs (leaf width view) [obj]": {
+   "grouped": 0.9968333333333333,
+   "session": 0.9605
+  },
+  "all organs (leaf width view) [bgonly]": {
+   "grouped": 0.9988333333333334,
+   "session": 0.9564999999999999
+  },
+  "all organs (leaf model) [obj]": {
+   "grouped": 0.9968333333333333,
+   "session": 0.9690000000000001
+  },
+  "all organs (leaf model) [bgonly]": {
+   "grouped": 0.9993333333333334,
+   "session": 0.9545
+  }
+ },
+ "combos_session": [
+  [
+   0.9195,
+   [
+    "crossSection",
+    "leafwidth",
+    "leavePattern"
+   ]
+  ],
+  [
+   0.906,
+   [
+    "buddataset",
+    "crossSection",
+    "leavePattern"
+   ]
+  ],
+  [
+   0.8925000000000001,
+   [
+    "buddataset",
+    "crossSection",
+    "leafwidth"
+   ]
+  ],
+  [
+   0.8714999999999999,
+   [
+    "buddataset",
+    "leafwidth",
+    "leavePattern"
+   ]
+  ],
+  [
+   0.8560000000000001,
+   [
+    "crossSection",
+    "leavePattern"
+   ]
+  ],
+  [
+   0.8395000000000001,
+   [
+    "crossSection",
+    "leafwidth"
+   ]
+  ],
+  [
+   0.825,
+   [
+    "buddataset",
+    "leavePattern"
+   ]
+  ],
+  [
+   0.8240000000000001,
+   [
+    "buddataset",
+    "crossSection"
+   ]
+  ],
+  [
+   0.8029999999999999,
+   [
+    "leafwidth",
+    "leavePattern"
+   ]
+  ],
+  [
+   0.7955,
+   [
+    "buddataset",
+    "leafwidth"
+   ]
+  ]
+ ]
+}

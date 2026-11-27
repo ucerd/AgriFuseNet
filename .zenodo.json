@@ -1,0 +1,17 @@
+{
+  "upload_type": "software",
+  "title": "AgriFuseNet: background-free multi-organ feature fusion for sugarcane variety identification",
+  "version": "1.0.0",
+  "creators": [
+    {"name": "Hussain, Tassadaq", "affiliation": "Centre for AI and Big Data and Department of Electrical Engineering, Namal University, Mianwali, Pakistan"},
+    {"name": "Younis, Kamran", "affiliation": "Centre for AI and Big Data, Namal University, Mianwali, Pakistan"}
+  ],
+  "description": "<p>Source code of AgriFuseNet, a background-free multi-organ system for image-based sugarcane variety identification, and of the leakage- and session-aware evaluation used in the accompanying article.</p><p>The code isolates the leaf blade, leaf top, bud and stalk cross-section with text-prompted Segment Anything 3, describes the leaf blade with a channel-wise attention fusion of masked-blade, vein-resolving tile and botanical descriptors, and combines any subset of organs with a permutation-invariant organ-set network trained with organ dropout. It also implements the data curation, leakage groups, capture periods, grouped and session-level cross-validation, background-swap and cross-board diagnostics, and the inference benchmarks. All results are regenerated from the public Sugarcane-PK v1.0 dataset (DOI 10.5281/zenodo.18619387); no images are included.</p>",
+  "access_right": "open",
+  "license": "MIT",
+  "keywords": ["sugarcane", "variety identification", "multi-organ fusion", "Segment Anything", "data leakage", "shortcut learning", "precision agriculture"],
+  "related_identifiers": [
+    {"identifier": "10.5281/zenodo.18619387", "relation": "references", "resource_type": "dataset", "scheme": "doi"}
+  ],
+  "language": "eng"
+}

@@ -1,0 +1,57 @@
+% Background audit: balanced accuracy of four views of every organ image under (a) grouped and
+% (b) session-level CV.
+% Build:  python make_fig4_data.py
+%         pdflatex fig_audit.tex && pdftoppm -png -r 600 -singlefile fig_audit.pdf fig_audit
+\documentclass[border=3pt]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[scaled=0.92]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{sansmath}
+\sansmath
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{groupplots}
+
+\definecolor{organfill}{HTML}{BFDDB3}
+\definecolor{organline}{HTML}{3E6B34}
+\pgfplotsset{
+  every axis/.append style={font=\small,line width=0.6pt,tick style={line width=0.6pt,black},
+    axis line style={black},label style={font=\small},tick label style={font=\small},
+    title style={font=\normalsize\bfseries,yshift=-2pt}},
+  vfull/.style={fill=black!70,draw=black},
+  vcorner/.style={fill=black!40,draw=black},
+  vbg/.style={fill=black!15,draw=black},
+  vorgan/.style={fill=organfill,draw=organline},
+}
+
+\begin{document}
+\begin{tikzpicture}
+\begin{groupplot}[group style={group size=2 by 1,horizontal sep=1.2cm},
+    scale only axis,width=6.4cm,height=4.0cm,
+    ybar=0pt,/pgf/bar width=0.3cm,enlarge x limits=0.16,
+    ymin=60,ymax=100,ytick={60,70,80,90,100},ymajorgrids,grid style={black!12,line width=0.4pt},
+    xtick={0,1,2,3},xticklabels={Leaf blade,Leaf top,Bud,Cross-section},xtick style={draw=none},
+    legend columns=4,
+    legend style={draw=none,fill=none,font=\small,cells={anchor=west},
+      /tikz/column 1/.style={column sep=0.12cm},/tikz/column 2/.style={column sep=0.7cm},
+      /tikz/column 3/.style={column sep=0.12cm},/tikz/column 4/.style={column sep=0.7cm},
+      /tikz/column 5/.style={column sep=0.12cm},/tikz/column 6/.style={column sep=0.7cm},
+      /tikz/column 7/.style={column sep=0.12cm},
+      at={(1.094,-0.2)},anchor=north},
+    legend image code/.code={\draw[#1,line width=0.6pt] (0cm,-0.1cm) rectangle (0.28cm,0.12cm);}]
+  % ---------------------------------------------------------------- (a) grouped CV
+  \nextgroupplot[title={(a) Grouped CV},ylabel={Balanced accuracy (\%)}]
+  \addplot[vfull]   table[x=x,y=full_g]   {data/fig_audit.dat};
+  \addplot[vcorner] table[x=x,y=corner_g] {data/fig_audit.dat};
+  \addplot[vbg]     table[x=x,y=bg_g]     {data/fig_audit.dat};
+  \addplot[vorgan]  table[x=x,y=organ_g]  {data/fig_audit.dat};
+  \legend{Full image,Image corners,Background only,Organ only}
+  % ---------------------------------------------------------------- (b) session-level CV
+  \nextgroupplot[title={(b) Session-level CV}]
+  \addplot[vfull]   table[x=x,y=full_s]   {data/fig_audit.dat};
+  \addplot[vcorner] table[x=x,y=corner_s] {data/fig_audit.dat};
+  \addplot[vbg]     table[x=x,y=bg_s]     {data/fig_audit.dat};
+  \addplot[vorgan]  table[x=x,y=organ_s]  {data/fig_audit.dat};
+\end{groupplot}
+\end{tikzpicture}
+\end{document}

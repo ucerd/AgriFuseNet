@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "AgriFuseNet: background-free multi-organ feature fusion for sugarcane variety identification"
+version: 1.0.0
+date-released: 2026-11-12
+doi: 10.5281/zenodo.24151375
+license: MIT
+authors:
+  - family-names: Hussain
+    given-names: Tassadaq
+    affiliation: "Centre for AI and Big Data and Department of Electrical Engineering, Namal University, Mianwali, Pakistan"
+  - family-names: Younis
+    given-names: Kamran
+    affiliation: "Centre for AI and Big Data, Namal University, Mianwali, Pakistan"
+abstract: >-
+  Code for background-free multi-organ sugarcane variety identification on the Sugarcane-PK v1.0 dataset:
+  text-prompted Segment Anything 3 organ segmentation, a leaf-blade encoder with channel-wise attention fusion of
+  masked-blade, vein-resolving tile and botanical descriptors, a permutation-invariant organ-set fusion network
+  with organ dropout, leakage groups, capture periods, grouped and session-level evaluation protocols, and
+  background shortcut diagnostics.
+keywords:
+  - sugarcane
+  - variety identification
+  - multi-organ fusion
+  - Segment Anything
+  - data leakage
+  - shortcut learning
+references:
+  - type: dataset
+    title: "Sugarcane-PK v1.0: A Scale-Referenced Dataset and MATLAB Implementation for Precision Phenotyping of Pakistani Sugarcane Varieties"
+    authors:
+      - family-names: Hussain
+        given-names: Tassadaq
+    year: 2026
+    publisher:
+      name: Zenodo
+    doi: 10.5281/zenodo.18619387

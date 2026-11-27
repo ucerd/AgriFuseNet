@@ -1,0 +1,36 @@
+0 --protocol grouped --variant main --methods late_sum,early_concat,set_mean,set_attn
+1 --protocol grouped --variant main --methods late_sum,early_concat,set_mean,set_attn
+2 --protocol grouped --variant main --methods late_sum,early_concat,set_mean,set_attn
+3 --protocol grouped --variant main --methods late_sum,early_concat,set_mean,set_attn
+4 --protocol grouped --variant main --methods late_sum,early_concat,set_mean,set_attn
+0 --protocol session --variant main --methods late_sum,early_concat,set_mean,set_attn
+0 --protocol grouped --variant period --methods late_sum,set_mean --pairing period
+1 --protocol grouped --variant period --methods late_sum,set_mean --pairing period
+2 --protocol grouped --variant period --methods late_sum,set_mean --pairing period
+3 --protocol grouped --variant period --methods late_sum,set_mean --pairing period
+4 --protocol grouped --variant period --methods late_sum,set_mean --pairing period
+0 --protocol session --variant period --methods late_sum,set_mean --pairing period
+0 --protocol grouped --variant abl_noaug --methods late_sum,set_mean --no-aug
+1 --protocol grouped --variant abl_noaug --methods late_sum,set_mean --no-aug
+2 --protocol grouped --variant abl_noaug --methods late_sum,set_mean --no-aug
+3 --protocol grouped --variant abl_noaug --methods late_sum,set_mean --no-aug
+4 --protocol grouped --variant abl_noaug --methods late_sum,set_mean --no-aug
+0 --protocol session --variant abl_noaug --methods late_sum,set_mean --no-aug
+0 --protocol grouped --variant abl_nodrop --methods set_mean --organ-drop 0
+1 --protocol grouped --variant abl_nodrop --methods set_mean --organ-drop 0
+2 --protocol grouped --variant abl_nodrop --methods set_mean --organ-drop 0
+3 --protocol grouped --variant abl_nodrop --methods set_mean --organ-drop 0
+4 --protocol grouped --variant abl_nodrop --methods set_mean --organ-drop 0
+0 --protocol session --variant abl_nodrop --methods set_mean --organ-drop 0
+0 --protocol grouped --variant abl_sam3leaf --methods late_sum,set_mean --leaf-encoder sam3obj
+1 --protocol grouped --variant abl_sam3leaf --methods late_sum,set_mean --leaf-encoder sam3obj
+2 --protocol grouped --variant abl_sam3leaf --methods late_sum,set_mean --leaf-encoder sam3obj
+3 --protocol grouped --variant abl_sam3leaf --methods late_sum,set_mean --leaf-encoder sam3obj
+4 --protocol grouped --variant abl_sam3leaf --methods late_sum,set_mean --leaf-encoder sam3obj
+0 --protocol session --variant abl_sam3leaf --methods late_sum,set_mean --leaf-encoder sam3obj
+0 --protocol grouped --variant abl_nohand --methods late_sum,set_mean --no-hand
+1 --protocol grouped --variant abl_nohand --methods late_sum,set_mean --no-hand
+2 --protocol grouped --variant abl_nohand --methods late_sum,set_mean --no-hand
+3 --protocol grouped --variant abl_nohand --methods late_sum,set_mean --no-hand
+4 --protocol grouped --variant abl_nohand --methods late_sum,set_mean --no-hand
+0 --protocol session --variant abl_nohand --methods late_sum,set_mean --no-hand

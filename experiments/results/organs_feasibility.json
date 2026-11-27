@@ -1,0 +1,289 @@
+{
+ "per_category": {
+  "buddataset": {
+   "n": 998,
+   "classes": [
+    "CP77-400",
+    "CPF-237",
+    "CPF-250",
+    "CPF-251",
+    "CPF-253"
+   ],
+   "n_groups": 93,
+   "full": {
+    "grouped_acc": 0.9769539078156312,
+    "grouped_bal": 0.9769528619528619,
+    "session_acc": 0.906813627254509,
+    "session_bal": 0.9068282828282828
+   },
+   "border": {
+    "grouped_acc": 0.9762859051436207,
+    "grouped_bal": 0.9763265993265993,
+    "session_acc": 0.8877755511022044,
+    "session_bal": 0.8877575757575759
+   }
+  },
+  "bulk_Sugarcane_images": {
+   "n": 755,
+   "classes": [
+    "CP77-400",
+    "CPF-237",
+    "CPF-250",
+    "CPF-251",
+    "CPF-253"
+   ],
+   "n_groups": 54,
+   "full": {
+    "grouped_acc": 0.9783664459161147,
+    "grouped_bal": 0.9577613519703071,
+    "session_acc": 0.7417218543046358,
+    "session_bal": 0.7718351101634685
+   },
+   "border": {
+    "grouped_acc": 0.9183222958057394,
+    "grouped_bal": 0.8906916212587855,
+    "session_acc": 0.7192052980132451,
+    "session_bal": 0.7150713101160863
+   }
+  },
+  "bulk_with_near_distance": {
+   "n": 1098,
+   "classes": [
+    "CP77-400",
+    "CPF-237",
+    "CPF-250",
+    "CPF-251",
+    "CPF-253"
+   ],
+   "n_groups": 80,
+   "full": {
+    "grouped_acc": 1.0,
+    "grouped_bal": 1.0,
+    "session_acc": 0.994535519125683,
+    "session_bal": 0.9971428571428571
+   },
+   "border": {
+    "grouped_acc": 0.9981785063752278,
+    "grouped_bal": 0.9948717948717949,
+    "session_acc": 0.9699453551912568,
+    "session_bal": 0.9650453969411317
+   }
+  },
+  "crossSection": {
+   "n": 974,
+   "classes": [
+    "CP77-400",
+    "CPF-237",
+    "CPF-250",
+    "CPF-251",
+    "CPF-253"
+   ],
+   "n_groups": 76,
+   "full": {
+    "grouped_acc": 0.9890485968514717,
+    "grouped_bal": 0.9892390924956369,
+    "session_acc": 0.7987679671457906,
+    "session_bal": 0.797622493062112
+   },
+   "border": {
+    "grouped_acc": 0.957221081451061,
+    "grouped_bal": 0.9566069102318352,
+    "session_acc": 0.7238193018480493,
+    "session_bal": 0.7216242668726576
+   }
+  },
+  "individualSugarcane": {
+   "n": 703,
+   "classes": [
+    "CP77-400",
+    "CPF-237",
+    "CPF-250",
+    "CPF-251",
+    "CPF-253"
+   ],
+   "n_groups": 67,
+   "full": {
+    "grouped_acc": 0.9715504978662874,
+    "grouped_bal": 0.9727595776816792,
+    "session_acc": 0.7937411095305832,
+    "session_bal": 0.8072587369277787
+   },
+   "border": {
+    "grouped_acc": 0.9611190137505927,
+    "grouped_bal": 0.9621654015908235,
+    "session_acc": 0.7852062588904695,
+    "session_bal": 0.7967497095544533
+   }
+  },
+  "internodeDistance": {
+   "n": 600,
+   "classes": [
+    "CP77-400",
+    "CPF-237",
+    "CPF-250"
+   ],
+   "n_groups": 31,
+   "full": {
+    "grouped_acc": 0.9966666666666667,
+    "grouped_bal": 0.9966666666666667,
+    "session_acc": 1.0,
+    "session_bal": 1.0
+   },
+   "border": {
+    "grouped_acc": 0.9983333333333334,
+    "grouped_bal": 0.9983333333333334,
+    "session_acc": 1.0,
+    "session_bal": 1.0
+   }
+  },
+  "leafwidth": {
+   "n": 981,
+   "classes": [
+    "CP77-400",
+    "CPF-237",
+    "CPF-250",
+    "CPF-251",
+    "CPF-253"
+   ],
+   "n_groups": 87,
+   "full": {
+    "grouped_acc": 0.9466530750934421,
+    "grouped_bal": 0.9457339444475124,
+    "session_acc": 0.7920489296636085,
+    "session_bal": 0.7909025898724391
+   },
+   "border": {
+    "grouped_acc": 0.9334012911994564,
+    "grouped_bal": 0.9324327498297348,
+    "session_acc": 0.7308868501529052,
+    "session_bal": 0.7301113810812303
+   }
+  },
+  "leavePattern": {
+   "n": 824,
+   "classes": [
+    "CP77-400",
+    "CPF-237",
+    "CPF-250",
+    "CPF-251",
+    "CPF-253"
+   ],
+   "n_groups": 66,
+   "full": {
+    "grouped_acc": 0.9902912621359223,
+    "grouped_bal": 0.9889433551198258,
+    "session_acc": 0.8264563106796117,
+    "session_bal": 0.8474139433551198
+   },
+   "border": {
+    "grouped_acc": 0.968042071197411,
+    "grouped_bal": 0.9613623819898329,
+    "session_acc": 0.8252427184466019,
+    "session_bal": 0.8377167755991286
+   }
+  }
+ },
+ "fusion": {
+  "leaf model only": {
+   "grouped": 0.9114999999999999,
+   "session": NaN
+  },
+  "leaf model + leaf pattern": {
+   "grouped": 0.9665,
+   "session": 0.857
+  },
+  "leaf-width (full image) + leaf pattern": {
+   "grouped": 0.9938333333333333,
+   "session": 0.8775000000000001
+  },
+  "all organs (no bulk), leaf model": {
+   "grouped": 1.0,
+   "session": 0.9515
+  },
+  "all organs + bulk, leaf model": {
+   "grouped": 1.0,
+   "session": 0.9879999999999999
+  }
+ },
+ "top_combos": [
+  [
+   1.0,
+   [
+    "bulk_Sugarcane_images",
+    "bulk_with_near_distance",
+    "leavePattern"
+   ]
+  ],
+  [
+   1.0,
+   [
+    "bulk_Sugarcane_images",
+    "bulk_with_near_distance",
+    "crossSection"
+   ]
+  ],
+  [
+   0.9998333333333335,
+   [
+    "bulk_with_near_distance",
+    "crossSection",
+    "leavePattern"
+   ]
+  ],
+  [
+   0.9998333333333335,
+   [
+    "bulk_Sugarcane_images",
+    "bulk_with_near_distance",
+    "individualSugarcane"
+   ]
+  ],
+  [
+   0.9996666666666667,
+   [
+    "bulk_with_near_distance",
+    "internodeDistance",
+    "leavePattern"
+   ]
+  ],
+  [
+   0.9996666666666667,
+   [
+    "bulk_with_near_distance",
+    "individualSugarcane",
+    "leavePattern"
+   ]
+  ],
+  [
+   0.9996666666666667,
+   [
+    "bulk_Sugarcane_images",
+    "bulk_with_near_distance",
+    "internodeDistance"
+   ]
+  ],
+  [
+   0.9996666666666667,
+   [
+    "bulk_Sugarcane_images",
+    "bulk_with_near_distance"
+   ]
+  ],
+  [
+   0.9994999999999999,
+   [
+    "bulk_with_near_distance",
+    "crossSection",
+    "leaf_model"
+   ]
+  ],
+  [
+   0.9994999999999999,
+   [
+    "bulk_with_near_distance",
+    "crossSection",
+    "internodeDistance"
+   ]
+  ]
+ ]
+}

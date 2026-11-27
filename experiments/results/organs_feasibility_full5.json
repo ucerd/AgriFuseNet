@@ -1,0 +1,882 @@
+{
+ "per_category": {
+  "buddataset": {
+   "n": 998,
+   "classes": [
+    "CP77-400",
+    "CPF-237",
+    "CPF-250",
+    "CPF-251",
+    "CPF-253"
+   ],
+   "n_groups": 93,
+   "full": {
+    "grouped_acc": 0.9771543086172345,
+    "grouped_bal": 0.9771535353535354,
+    "session_acc": 0.906813627254509,
+    "session_bal": 0.9068282828282828
+   },
+   "border": {
+    "grouped_acc": 0.9757515030060121,
+    "grouped_bal": 0.9757919191919191,
+    "session_acc": 0.8877755511022044,
+    "session_bal": 0.8877575757575759
+   }
+  },
+  "bulk_Sugarcane_images": {
+   "n": 755,
+   "classes": [
+    "CP77-400",
+    "CPF-237",
+    "CPF-250",
+    "CPF-251",
+    "CPF-253"
+   ],
+   "n_groups": 54,
+   "full": {
+    "grouped_acc": 0.9780132450331125,
+    "grouped_bal": 0.9578062544420753,
+    "session_acc": 0.7417218543046358,
+    "session_bal": 0.7718351101634685
+   },
+   "border": {
+    "grouped_acc": 0.9247682119205297,
+    "grouped_bal": 0.8988726841980574,
+    "session_acc": 0.7192052980132451,
+    "session_bal": 0.7150713101160863
+   }
+  },
+  "bulk_with_near_distance": {
+   "n": 1098,
+   "classes": [
+    "CP77-400",
+    "CPF-237",
+    "CPF-250",
+    "CPF-251",
+    "CPF-253"
+   ],
+   "n_groups": 80,
+   "full": {
+    "grouped_acc": 1.0,
+    "grouped_bal": 1.0,
+    "session_acc": 0.994535519125683,
+    "session_bal": 0.9971428571428571
+   },
+   "border": {
+    "grouped_acc": 0.9985428051001822,
+    "grouped_bal": 0.9952564102564103,
+    "session_acc": 0.9699453551912568,
+    "session_bal": 0.9650453969411317
+   }
+  },
+  "crossSection": {
+   "n": 974,
+   "classes": [
+    "CP77-400",
+    "CPF-237",
+    "CPF-250",
+    "CPF-251",
+    "CPF-253"
+   ],
+   "n_groups": 76,
+   "full": {
+    "grouped_acc": 0.9856262833675565,
+    "grouped_bal": 0.9858774869109947,
+    "session_acc": 0.7987679671457906,
+    "session_bal": 0.797622493062112
+   },
+   "border": {
+    "grouped_acc": 0.9574948665297741,
+    "grouped_bal": 0.9569009527079221,
+    "session_acc": 0.7238193018480493,
+    "session_bal": 0.7216242668726576
+   }
+  },
+  "individualSugarcane": {
+   "n": 703,
+   "classes": [
+    "CP77-400",
+    "CPF-237",
+    "CPF-250",
+    "CPF-251",
+    "CPF-253"
+   ],
+   "n_groups": 67,
+   "full": {
+    "grouped_acc": 0.9698435277382647,
+    "grouped_bal": 0.9711483364364861,
+    "session_acc": 0.7937411095305832,
+    "session_bal": 0.8072587369277787
+   },
+   "border": {
+    "grouped_acc": 0.9607396870554765,
+    "grouped_bal": 0.9621407100204691,
+    "session_acc": 0.7852062588904695,
+    "session_bal": 0.7967497095544533
+   }
+  },
+  "internodeDistance": {
+   "n": 600,
+   "classes": [
+    "CP77-400",
+    "CPF-237",
+    "CPF-250"
+   ],
+   "n_groups": 31,
+   "full": {
+    "grouped_acc": 0.9966666666666667,
+    "grouped_bal": 0.9966666666666667,
+    "session_acc": 1.0,
+    "session_bal": 1.0
+   },
+   "border": {
+    "grouped_acc": 0.9986666666666666,
+    "grouped_bal": 0.9986666666666666,
+    "session_acc": 1.0,
+    "session_bal": 1.0
+   }
+  },
+  "leafwidth": {
+   "n": 981,
+   "classes": [
+    "CP77-400",
+    "CPF-237",
+    "CPF-250",
+    "CPF-251",
+    "CPF-253"
+   ],
+   "n_groups": 87,
+   "full": {
+    "grouped_acc": 0.9420998980632008,
+    "grouped_bal": 0.9409541443481142,
+    "session_acc": 0.7920489296636085,
+    "session_bal": 0.7909025898724391
+   },
+   "border": {
+    "grouped_acc": 0.9347604485219165,
+    "grouped_bal": 0.9337594897564747,
+    "session_acc": 0.7308868501529052,
+    "session_bal": 0.7301113810812303
+   }
+  },
+  "leavePattern": {
+   "n": 824,
+   "classes": [
+    "CP77-400",
+    "CPF-237",
+    "CPF-250",
+    "CPF-251",
+    "CPF-253"
+   ],
+   "n_groups": 66,
+   "full": {
+    "grouped_acc": 0.983009708737864,
+    "grouped_bal": 0.9828727668845316,
+    "session_acc": 0.8264563106796117,
+    "session_bal": 0.8474139433551198
+   },
+   "border": {
+    "grouped_acc": 0.9560679611650486,
+    "grouped_bal": 0.9503747276688452,
+    "session_acc": 0.8252427184466019,
+    "session_bal": 0.8377167755991286
+   }
+  }
+ },
+ "fusion": {
+  "leaf model only [full]": {
+   "grouped": 0.9126999999999998,
+   "session": 0.7955
+  },
+  "leaf model only [border]": {
+   "grouped": 0.9126999999999998,
+   "session": 0.7955
+  },
+  "leaf width only [full]": {
+   "grouped": 0.9368000000000001,
+   "session": 0.7875
+  },
+  "leaf width only [border]": {
+   "grouped": 0.9293000000000001,
+   "session": 0.7264999999999999
+  },
+  "leaf model + leaf pattern [full]": {
+   "grouped": 0.9628,
+   "session": 0.8644999999999999
+  },
+  "leaf model + leaf pattern [border]": {
+   "grouped": 0.9696,
+   "session": 0.8685
+  },
+  "leaf width + leaf pattern [full]": {
+   "grouped": 0.9870000000000001,
+   "session": 0.8775000000000001
+  },
+  "leaf width + leaf pattern [border]": {
+   "grouped": 0.9822,
+   "session": 0.8510000000000002
+  },
+  "all organs (leaf width view) [full]": {
+   "grouped": 1.0,
+   "session": 0.993
+  },
+  "all organs (leaf width view) [border]": {
+   "grouped": 1.0,
+   "session": 0.9785
+  },
+  "all organs (leaf model) [full]": {
+   "grouped": 1.0,
+   "session": 0.991
+  },
+  "all organs (leaf model) [border]": {
+   "grouped": 1.0,
+   "session": 0.986
+  }
+ },
+ "combos_session": [
+  [
+   0.998,
+   [
+    "bulk_with_near_distance",
+    "internodeDistance"
+   ]
+  ],
+  [
+   0.9925,
+   [
+    "buddataset",
+    "bulk_with_near_distance",
+    "internodeDistance"
+   ]
+  ],
+  [
+   0.9894999999999999,
+   [
+    "bulk_with_near_distance",
+    "internodeDistance",
+    "leavePattern"
+   ]
+  ],
+  [
+   0.9835,
+   [
+    "bulk_with_near_distance",
+    "crossSection",
+    "internodeDistance"
+   ]
+  ],
+  [
+   0.9745000000000001,
+   [
+    "buddataset",
+    "bulk_with_near_distance",
+    "crossSection"
+   ]
+  ],
+  [
+   0.9715,
+   [
+    "bulk_with_near_distance",
+    "internodeDistance",
+    "leafwidth"
+   ]
+  ],
+  [
+   0.9709999999999999,
+   [
+    "buddataset",
+    "bulk_with_near_distance",
+    "leafwidth"
+   ]
+  ],
+  [
+   0.968,
+   [
+    "bulk_Sugarcane_images",
+    "bulk_with_near_distance",
+    "crossSection"
+   ]
+  ],
+  [
+   0.9670000000000002,
+   [
+    "bulk_with_near_distance",
+    "crossSection",
+    "leafwidth"
+   ]
+  ],
+  [
+   0.9665000000000001,
+   [
+    "bulk_with_near_distance",
+    "leafwidth",
+    "leavePattern"
+   ]
+  ],
+  [
+   0.966,
+   [
+    "buddataset",
+    "bulk_with_near_distance",
+    "leavePattern"
+   ]
+  ],
+  [
+   0.961,
+   [
+    "internodeDistance",
+    "leafwidth",
+    "leavePattern"
+   ]
+  ],
+  [
+   0.9594999999999999,
+   [
+    "bulk_with_near_distance",
+    "crossSection",
+    "leavePattern"
+   ]
+  ],
+  [
+   0.9585000000000001,
+   [
+    "bulk_Sugarcane_images",
+    "bulk_with_near_distance",
+    "leafwidth"
+   ]
+  ],
+  [
+   0.9585000000000001,
+   [
+    "buddataset",
+    "bulk_with_near_distance"
+   ]
+  ],
+  [
+   0.9550000000000001,
+   [
+    "bulk_Sugarcane_images",
+    "bulk_with_near_distance",
+    "internodeDistance"
+   ]
+  ],
+  [
+   0.9435,
+   [
+    "buddataset",
+    "internodeDistance",
+    "leavePattern"
+   ]
+  ],
+  [
+   0.9425000000000001,
+   [
+    "buddataset",
+    "bulk_Sugarcane_images",
+    "bulk_with_near_distance"
+   ]
+  ],
+  [
+   0.9424999999999999,
+   [
+    "buddataset",
+    "crossSection",
+    "internodeDistance"
+   ]
+  ],
+  [
+   0.9410000000000001,
+   [
+    "buddataset",
+    "leafwidth",
+    "leavePattern"
+   ]
+  ],
+  [
+   0.9405000000000001,
+   [
+    "buddataset",
+    "internodeDistance",
+    "leafwidth"
+   ]
+  ],
+  [
+   0.9369999999999999,
+   [
+    "bulk_with_near_distance",
+    "crossSection"
+   ]
+  ],
+  [
+   0.9355,
+   [
+    "bulk_Sugarcane_images",
+    "bulk_with_near_distance",
+    "leavePattern"
+   ]
+  ],
+  [
+   0.9344999999999999,
+   [
+    "buddataset",
+    "bulk_Sugarcane_images",
+    "leafwidth"
+   ]
+  ],
+  [
+   0.932,
+   [
+    "bulk_with_near_distance",
+    "leavePattern"
+   ]
+  ],
+  [
+   0.9299999999999999,
+   [
+    "buddataset",
+    "crossSection",
+    "leafwidth"
+   ]
+  ],
+  [
+   0.9295,
+   [
+    "buddataset",
+    "crossSection",
+    "leavePattern"
+   ]
+  ],
+  [
+   0.9289999999999999,
+   [
+    "bulk_Sugarcane_images",
+    "crossSection",
+    "leafwidth"
+   ]
+  ],
+  [
+   0.9275,
+   [
+    "bulk_Sugarcane_images",
+    "internodeDistance",
+    "leafwidth"
+   ]
+  ],
+  [
+   0.9269999999999999,
+   [
+    "buddataset",
+    "bulk_with_near_distance",
+    "individualSugarcane"
+   ]
+  ],
+  [
+   0.924,
+   [
+    "crossSection",
+    "internodeDistance",
+    "leafwidth"
+   ]
+  ],
+  [
+   0.9225000000000001,
+   [
+    "crossSection",
+    "leafwidth",
+    "leavePattern"
+   ]
+  ],
+  [
+   0.9215,
+   [
+    "buddataset",
+    "internodeDistance"
+   ]
+  ],
+  [
+   0.914,
+   [
+    "bulk_with_near_distance",
+    "individualSugarcane",
+    "leafwidth"
+   ]
+  ],
+  [
+   0.913,
+   [
+    "crossSection",
+    "internodeDistance",
+    "leavePattern"
+   ]
+  ],
+  [
+   0.9129999999999999,
+   [
+    "bulk_with_near_distance",
+    "crossSection",
+    "individualSugarcane"
+   ]
+  ],
+  [
+   0.9120000000000001,
+   [
+    "bulk_Sugarcane_images",
+    "crossSection",
+    "internodeDistance"
+   ]
+  ],
+  [
+   0.9120000000000001,
+   [
+    "buddataset",
+    "bulk_Sugarcane_images",
+    "crossSection"
+   ]
+  ],
+  [
+   0.908,
+   [
+    "bulk_with_near_distance",
+    "leafwidth"
+   ]
+  ],
+  [
+   0.9065,
+   [
+    "bulk_Sugarcane_images",
+    "leafwidth",
+    "leavePattern"
+   ]
+  ],
+  [
+   0.9055,
+   [
+    "bulk_Sugarcane_images",
+    "internodeDistance",
+    "leavePattern"
+   ]
+  ],
+  [
+   0.905,
+   [
+    "buddataset",
+    "bulk_Sugarcane_images",
+    "leavePattern"
+   ]
+  ],
+  [
+   0.9049999999999999,
+   [
+    "buddataset",
+    "bulk_Sugarcane_images",
+    "internodeDistance"
+   ]
+  ],
+  [
+   0.9025000000000001,
+   [
+    "crossSection",
+    "internodeDistance"
+   ]
+  ],
+  [
+   0.893,
+   [
+    "bulk_Sugarcane_images",
+    "crossSection",
+    "leavePattern"
+   ]
+  ],
+  [
+   0.8875,
+   [
+    "crossSection",
+    "leavePattern"
+   ]
+  ],
+  [
+   0.8870000000000001,
+   [
+    "bulk_Sugarcane_images",
+    "bulk_with_near_distance"
+   ]
+  ],
+  [
+   0.8855000000000001,
+   [
+    "bulk_with_near_distance",
+    "individualSugarcane",
+    "leavePattern"
+   ]
+  ],
+  [
+   0.885,
+   [
+    "buddataset",
+    "leavePattern"
+   ]
+  ],
+  [
+   0.8829999999999998,
+   [
+    "bulk_Sugarcane_images",
+    "crossSection",
+    "individualSugarcane"
+   ]
+  ],
+  [
+   0.882,
+   [
+    "buddataset",
+    "crossSection"
+   ]
+  ],
+  [
+   0.8815,
+   [
+    "crossSection",
+    "individualSugarcane",
+    "leafwidth"
+   ]
+  ],
+  [
+   0.8809999999999999,
+   [
+    "crossSection",
+    "individualSugarcane",
+    "internodeDistance"
+   ]
+  ],
+  [
+   0.8800000000000001,
+   [
+    "bulk_Sugarcane_images",
+    "bulk_with_near_distance",
+    "individualSugarcane"
+   ]
+  ],
+  [
+   0.8789999999999999,
+   [
+    "bulk_with_near_distance",
+    "individualSugarcane",
+    "internodeDistance"
+   ]
+  ],
+  [
+   0.8775000000000001,
+   [
+    "leafwidth",
+    "leavePattern"
+   ]
+  ],
+  [
+   0.875,
+   [
+    "buddataset",
+    "crossSection",
+    "individualSugarcane"
+   ]
+  ],
+  [
+   0.873,
+   [
+    "internodeDistance",
+    "leavePattern"
+   ]
+  ],
+  [
+   0.8709999999999999,
+   [
+    "crossSection",
+    "leafwidth"
+   ]
+  ],
+  [
+   0.869,
+   [
+    "buddataset",
+    "individualSugarcane",
+    "leavePattern"
+   ]
+  ],
+  [
+   0.8675,
+   [
+    "buddataset",
+    "individualSugarcane",
+    "leafwidth"
+   ]
+  ],
+  [
+   0.8625,
+   [
+    "buddataset",
+    "leafwidth"
+   ]
+  ],
+  [
+   0.861,
+   [
+    "bulk_Sugarcane_images",
+    "individualSugarcane",
+    "leafwidth"
+   ]
+  ],
+  [
+   0.8594999999999999,
+   [
+    "crossSection",
+    "individualSugarcane",
+    "leavePattern"
+   ]
+  ],
+  [
+   0.8554999999999999,
+   [
+    "buddataset",
+    "bulk_Sugarcane_images",
+    "individualSugarcane"
+   ]
+  ],
+  [
+   0.8550000000000001,
+   [
+    "individualSugarcane",
+    "leafwidth",
+    "leavePattern"
+   ]
+  ],
+  [
+   0.8525,
+   [
+    "buddataset",
+    "individualSugarcane",
+    "internodeDistance"
+   ]
+  ],
+  [
+   0.8480000000000001,
+   [
+    "bulk_Sugarcane_images",
+    "internodeDistance"
+   ]
+  ],
+  [
+   0.8405000000000001,
+   [
+    "bulk_Sugarcane_images",
+    "individualSugarcane",
+    "leavePattern"
+   ]
+  ],
+  [
+   0.8394999999999999,
+   [
+    "individualSugarcane",
+    "internodeDistance",
+    "leavePattern"
+   ]
+  ],
+  [
+   0.8354999999999999,
+   [
+    "bulk_Sugarcane_images",
+    "individualSugarcane",
+    "internodeDistance"
+   ]
+  ],
+  [
+   0.8280000000000001,
+   [
+    "individualSugarcane",
+    "internodeDistance",
+    "leafwidth"
+   ]
+  ],
+  [
+   0.8244999999999999,
+   [
+    "internodeDistance",
+    "leafwidth"
+   ]
+  ],
+  [
+   0.8230000000000001,
+   [
+    "bulk_with_near_distance",
+    "individualSugarcane"
+   ]
+  ],
+  [
+   0.8219999999999998,
+   [
+    "individualSugarcane",
+    "internodeDistance"
+   ]
+  ],
+  [
+   0.818,
+   [
+    "bulk_Sugarcane_images",
+    "crossSection"
+   ]
+  ],
+  [
+   0.8140000000000001,
+   [
+    "bulk_Sugarcane_images",
+    "leafwidth"
+   ]
+  ],
+  [
+   0.8135,
+   [
+    "buddataset",
+    "bulk_Sugarcane_images"
+   ]
+  ],
+  [
+   0.7905000000000001,
+   [
+    "bulk_Sugarcane_images",
+    "leavePattern"
+   ]
+  ],
+  [
+   0.7865,
+   [
+    "individualSugarcane",
+    "leavePattern"
+   ]
+  ],
+  [
+   0.7785,
+   [
+    "crossSection",
+    "individualSugarcane"
+   ]
+  ],
+  [
+   0.7779999999999999,
+   [
+    "buddataset",
+    "individualSugarcane"
+   ]
+  ],
+  [
+   0.772,
+   [
+    "individualSugarcane",
+    "leafwidth"
+   ]
+  ],
+  [
+   0.752,
+   [
+    "bulk_Sugarcane_images",
+    "individualSugarcane"
+   ]
+  ]
+ ]
+}

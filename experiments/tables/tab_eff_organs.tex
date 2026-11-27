@@ -1,0 +1,20 @@
+\begin{table}[tbp]
+\centering
+\footnotesize
+\caption{Inference cost of the four-organ system per specimen on one GPU.}
+\label{tab:eff_organs}
+\begin{tabular}{lrr}
+\toprule
+Stage & Time (ms) & Parameters (M) \\
+\midrule
+SAM~3 segmentation, leaf blade & 560 & \\
+SAM~3 segmentation, leaf top & 565 & \\
+SAM~3 segmentation, bud & 186 & \\
+SAM~3 segmentation, cross-section & 372 & \\
+DINOv2 organ encoding (4 crops) & 30 & 21.6 \\
+Organ-set fusion & 1.8 & 0.72 \\
+\midrule
+Total per specimen & 1714 & 863 \\
+\bottomrule
+\end{tabular}
+\end{table}
